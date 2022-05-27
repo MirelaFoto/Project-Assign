@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IHero } from './models/hero';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'project';
+  
+hero: IHero={
+id:1,
+name:'Batman',
+imageUrl:"../assets/batman.jpg",
+abilities:['Abilita', 'Intimidazione', 'Intelleto', 'Arti Marziali', 'Armi tecnologiche']
+  
+}
+
 }

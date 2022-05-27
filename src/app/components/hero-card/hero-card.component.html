@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+  <img [src]="hero.imageUrl" class="card-img-top" alt="batman">
+  <div class="card-body">
+    <h4 class="card-title">{{ hero.name }} </h4>
+
+    <h6><u>{{hero.abilities[0]}}</u> </h6>
+    <ul>
+
+      <li *ngFor="let ele of hero.abilities"> <span>
+          {{ele}}
+        </span></li>
+    </ul>
+
+  </div>
+</div>

@@ -1,13 +1,14 @@
-# AngularCourse
+In questo secondo esercizio andremo a riorganizzare il codice scritto in precedenza tramite la creazione del componente Stateless HeroCardComponent. Questo componente riceverà tre proprietà in input dal componente padre e li mostrerà all'interno della card. Le proprietà in input che il componente accetterà sono le stesse definite all'interno di AppComponent:
 
-Benvenuto/a nello stage di allenamento che ti consentirà di apprendere le skills del mondo Angular.
+    Un titolo con il nome dell'eroe
+    Un immagine dell'eroe
+    La lista delle abilità e dei super poteri che l'eroe possiede
 
-All'interno di questo file README.md troverai tutte le informazioni degli esercizi da seguire per diventare un vero supereroe di Angular. Per ogni esercizio verranno create due branch: exercise-start e exercise-final. La prima conterrà le informazioni dell'esercizio da eseguire, la seconda invece conterrà l'esercizio completato.
+Infine andremo a rifattorizzare ulteriormente il codice creando il tipo Hero, il quale sarà formato dalle seguenti proprietà:
 
-## Esercizio 1
-In questo primo esercizio andremo a creare all'interno del componente **AppComponent** una card che conterrà le informazioni del nostro eroe preferito.
-La card sarà composta dalle seguenti informazioni:
+    id (number)
+    name (string)
+    imageUrl (string)
+    abilities (string[])
 
-* Un titolo con il nome dell'eroe
-* Un immagine dell'eroe
-* La lista delle abilità e dei super poteri che l'eroe possiede
+Per concludere sostituiremo le tre proprietà di input del componente HeroCardComponent con un'unica proprietà di tipo Hero.
