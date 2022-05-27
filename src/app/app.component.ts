@@ -15,5 +15,8 @@ imageUrl:"../assets/batman.jpg",
 abilities:['Abilita', 'Intimidazione', 'Intelleto', 'Arti Marziali', 'Armi tecnologiche']
   
 }
+showPhrase(frase:string){
+alert(frase)
 
+}
 }
