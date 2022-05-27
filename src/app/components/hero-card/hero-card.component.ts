@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { IHero } from 'src/app/models/hero';
 import { EventEmitter } from '@angular/core';
+import { HeroPhraseGeneratorService} from 'src/app/services/hero-phrase-generator-service.service';
 
 @Component({
   selector: 'app-hero-card',
@@ -9,7 +10,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class HeroCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private heroService: HeroPhraseGeneratorService) { }
 
   ngOnInit(): void {
   }
@@ -17,16 +18,9 @@ export class HeroCardComponent implements OnInit {
 
   @Output() phrases: EventEmitter<string> = new EventEmitter<string> ();
 
-  heroPhrase:string[]=[
-    'It s not who I am underneath, but what I do that defines me',
-    'He s the hero Gotham deserves, but not the one it needs right now',
-    'Maybe that s what hero is about',
-    'This city just showed you that its full of people ready to believe in good',
-'I am the strongest of all'
+  randomFr():void{
+    
+    this.phrases.emit(this.heroService.randomFr())
+    }
 
-  ]
-randomFr():void{
-const frase:number = Math.floor(Math.random() * this.heroPhrase.length) // generate the random phrase
-this.phrases.emit(this.heroPhrase[frase])
-}
 }
