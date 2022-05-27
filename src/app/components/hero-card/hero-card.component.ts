@@ -14,6 +14,9 @@ export class HeroCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+  zoom:'none'| 'scale(1.1)'= 'none';
   @Input() hero!:IHero;
 
   @Output() phrases: EventEmitter<string> = new EventEmitter<string> ();
@@ -22,5 +25,7 @@ export class HeroCardComponent implements OnInit {
     
     this.phrases.emit(this.heroService.randomFr())
     }
+
+
 
 }

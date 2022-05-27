@@ -1,12 +1,13 @@
 <div class="card" style="width: 18rem;">
   <img [src]="hero.imageUrl" class="card-img-top" alt="batman">
   <div class="card-body">
-    <h4 class="card-title">{{ hero.name }} </h4>
+    <h4 class="card-title" [ngStyle]="{'transform': zoom } " (mouseenter)="zoom ='scale(1.1)'"
+      (mouseleave)="zoom='none'">{{ hero.name }} </h4>
 
     <h6><u>{{hero.abilities[0]}}</u> </h6>
     <ul>
 
-      <li *ngFor="let ele of hero.abilities"> <span>
+      <li *ngFor="let ele of hero.abilities" [ngClass]="'yellow'"> <span>
           {{ele}}
         </span></li>
     </ul>
