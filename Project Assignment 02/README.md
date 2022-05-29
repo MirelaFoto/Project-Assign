@@ -1,21 +1,16 @@
-# AngularCourse
+Project Assignment 07
+In questo esercizio proseguiremo con lo sviluppo della nostra todo list attraverso la realizzazione di tre componenti: TodoPageComponent, TodoListComponent e TodoListItemComponent.
 
-Benvenuto/a nello stage di allenamento che ti consentirà di apprendere le skills del mondo Angular.
+Le operazioni da eseguire sono le seguenti:
 
-All'interno di questo file README.md troverai tutte le informazioni degli esercizi da seguire per diventare un vero supereroe di Angular. Per ogni esercizio verranno create due branch: exercise-start e exercise-final. La prima conterrà le informazioni dell'esercizio da eseguire, la seconda invece conterrà l'esercizio completato.
-
-## Esercizio 2
-In questo secondo esercizio andremo a riorganizzare il codice scritto in precedenza tramite la creazione del componente Stateless **HeroCardComponent**. Questo componente riceverà tre proprietà in input dal componente padre e li mostrerà all'interno della card. Le proprietà in input che il componente accetterà sono le stesse definite all'interno di **AppComponent**:
-
-* Un titolo con il nome dell'eroe
-* Un immagine dell'eroe
-* La lista delle abilità e dei super poteri che l'eroe possiede
-
-Infine andremo a rifattorizzare ulteriormente il codice creando il tipo **Hero**, il quale sarà formato dalle seguenti proprietà:
-
-* id (**number**)
-* name (**string**)
-* imageUrl (**string**)
-* abilities (**string[]**)
-
-Per concludere sostituiremo le tre proprietà di input del componente **HeroCardComponent** con un'unica proprietà di tipo **Hero**.
+Creare il componente TodoPageComponent, il quale si occuperà di mostrare la lista e il form per l'aggiunta dei nuovi todo
+Creare il componente TodoListComponent, il quale accetterà come proprietà in input un array di Todo e li mostrerà a schermo sotto forma di elenco
+Creare il componente TodoListItemComponent per il singolo todo dell'elenco. Questo componente accetterà in input un Todo e lo mostrerà a schermo sotto forma di card. La card dovrà contenere le seguenti informazioni:
+Titolo
+Descrizione
+Data creazione
+Checkbox che consentirà di flaggare il todo una volta completato
+Creare una nuova rotta per accedere alla pagina contenente la lista dei todo. Per aggiungere una nuova rotta occorrerà utilizzare il modulo RouterModule di Angular
+Rifattorizzare il componente AppComponent affinché utilizzi la direttiva RouterOutlet per consentire la navigazione dei componenti. Di conseguenza occorrerà creare il componente HeroPageComponent e la relativa rotta per consentire la navigazione tra la lista dei todo e la card dell'eroe
+Infine, aggiungere un pulsante all'interno del componente HeroCardComponent che, una volta cliccato, dovrà indirizzare l'utente alla pagina contenente la lista dei todo.
+N.B:* il componente HeroCardComponent è Stateless, pertanto bisognerà gestire il reindirizzamento dell'utente tramite un evento custom
