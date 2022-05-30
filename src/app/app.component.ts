@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IHero } from './models/hero';
+
 
 @Component({
   selector: 'app-root',
@@ -8,15 +8,5 @@ import { IHero } from './models/hero';
 })
 export class AppComponent {
   
-hero: IHero={
-id:1,
-name:'Batman',
-imageUrl:"../assets/batman.jpg",
-abilities:['Abilita', 'Intimidazione', 'Intelleto', 'Arti Marziali', 'Armi tecnologiche']
-  
-}
-showPhrase(frase:string){
-alert(frase)
 
-}
 }

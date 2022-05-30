@@ -20,7 +20,8 @@ export class HeroCardComponent implements OnInit {
   @Input() hero!:IHero;
 
   @Output() phrases: EventEmitter<string> = new EventEmitter<string> ();
-
+ @Output() showList: EventEmitter<number>= new EventEmitter<number> ()
+ 
   randomFr():void{
     
     this.phrases.emit(this.heroService.randomFr())

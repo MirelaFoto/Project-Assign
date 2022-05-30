@@ -4,15 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
-
+import { TodoPageComponent } from './components/todo-page/todo-page.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoListItemComponent } from './components/todo-list-item/todo-list-item.component';
+import { HeroPageComponent } from './hero-page/hero-page.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroCardComponent
+    HeroCardComponent,
+    TodoPageComponent,
+    TodoListComponent,
+    TodoListItemComponent,
+    HeroPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
