@@ -10,6 +10,7 @@ import { TodoListItemComponent } from './components/todo-list-item/todo-list-ite
 import { HeroPageComponent } from './hero-page/hero-page.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { TodoFormComponent } from './todo-form/todo-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     TodoPageComponent,
     TodoListComponent,
     TodoListItemComponent,
-    HeroPageComponent
+    HeroPageComponent,
+    TodoFormComponent
   ],
   imports: [
     BrowserModule,
