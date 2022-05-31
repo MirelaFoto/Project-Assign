@@ -3,7 +3,8 @@
         <div class="card" >
             <div class="card-body"> 
                
-        <p class="card-text"><strong>{{todos.title}}</strong></p>
+        <p class="card-text"><strong>{{todos.title}}</strong> <span>
+            <button type="button" class="btn btn-warn " (click)="deleteTodo.emit(todos.id)"><img [src]="cestinoUrl" ></button></span></p>
                  
             </div>
 
@@ -16,7 +17,7 @@
                 </small>
             </div>
             <div class="container col-md-1 offset-4">
-            <input type="checkbox" name="" id=""></div>
+                <input type="checkbox" name="done" [(ngModel)]="todos.done" (change)="updateTodo.emit(todos)"></div>
         </div>
     </div>
 </div> 

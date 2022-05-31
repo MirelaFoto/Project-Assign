@@ -21,8 +21,9 @@ export class HeroPageComponent implements OnInit {
   ngOnInit(): void {
   }
 showList(id:number):void{
-this.router.navigate(['todo-page'])
+ this.router.navigate(['todo-page'])
 }
+
 showPhrase(frase:string){
   alert(frase)
   

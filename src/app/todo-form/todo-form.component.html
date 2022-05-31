@@ -1,0 +1,23 @@
+<div class="container col-md-5 offset-2">
+
+    <h2>Add a new task </h2>
+<form [formGroup]="form" (ngSubmit)="addTodo()" class="row g-3">
+    <div class="col-md-4">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="title" class="form-control" placeholder="Title" formControlName="title">
+        
+    </div>
+    
+    
+    <div class="col-md-12">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" name="description" placeholder="Descrizione" formControlName="description">
+       
+    </div>
+   
+    
+    <div class="col-12">
+        <button type="submit" class="w-100 btn btn-primary btn-lg">Add task</button>
+    </div>
+</form>
+</div>

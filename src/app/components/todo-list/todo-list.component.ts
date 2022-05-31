@@ -1,4 +1,6 @@
 import { Input } from '@angular/core';
+import { Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { ITodo } from 'src/app/models/todo';
 
@@ -14,4 +16,6 @@ export class TodoListComponent implements OnInit {
   ngOnInit(): void {
   }
 @Input() todos!:ITodo[]
+@Output() updateTodo: EventEmitter<ITodo> = new EventEmitter<ITodo>();
+  @Output() deleteTodo: EventEmitter<number> = new EventEmitter<number>();
 }

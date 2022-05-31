@@ -4,32 +4,11 @@
 </div>
 
 
-<app-todo-list [todos]="todos"> </app-todo-list>
+<app-todo-list [todos]="todos" 
+(updateTodo)="updateTodo($event)" 
+(deleteTodo)="deleteTodo($event)">
+
+</app-todo-list>
 <hr>
-
-<div class="container col-md-5 offset-2">
-
-    <h2>Add a new task </h2>
-<form #f="ngForm" (ngSubmit)="add(f.value)" class="row g-3">
-    <div class="col-md-4">
-        <label for="title" class="form-label">Title</label>
-        <input type="text" name="title" class="form-control" placeholder="Title" ngModel>
-        <p class = 'text-danger'><small> Il campo e' richiesto</small></p>
-    </div>
-    
-    
-    <div class="col-md-12">
-        <label for="description" class="form-label">Description</label>
-        <textarea class="form-control" name="description" placeholder="Descrizione" ngModel></textarea>
-        <p class="text-danger"><small>Il campo e' richiesto</small></p>
-    </div>
-    <div class="col-md-4">
-        <label for="validationDefaultUsername" class="form-label">Date</label>
-        <input type="date" name="start" class="form-control" placeholder="Data init" ngModel>
-        <p class="text-danger"><small>Il campo e' richiesto</small></p>
-    </div>
-    <div class="col-12">
-        <button type="submit" class="w-100 btn btn-primary btn-lg">Add task</button>
-    </div>
-</form>
-</div>
+  <app-todo-form (createTodo)="addTodo($event)"></app-todo-form>  
+ 
