@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IHero } from '../models/hero';
+import { IHero } from '../../models/hero';
 
 @Component({
   selector: 'app-hero-page',

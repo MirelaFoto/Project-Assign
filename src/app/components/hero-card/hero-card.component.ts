@@ -16,7 +16,7 @@ export class HeroCardComponent implements OnInit {
   }
 
 
-  zoom:'none'| 'scale(1.1)'= 'none';
+ 
   @Input() hero!:IHero;
 
   @Output() phrases: EventEmitter<string> = new EventEmitter<string> ();

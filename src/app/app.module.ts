@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroCardComponent } from 'src/app/components/hero-card/hero-card.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HeroPageComponent } from 'src/app/hero-page/hero-page.component';
-import { TodoPageComponent } from 'src/app/components/todo-page/todo-page.component';
+import { HeroPageComponent } from 'src/app/views/hero-page/hero-page.component';
+import { TodoPageComponent } from 'src/app/views/todo-page/todo-page.component';
 import { TodoListComponent } from 'src/app/components/todo-list/todo-list.component';
 import { TodoListItemComponent } from 'src/app/components/todo-list-item/todo-list-item.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TodoFormComponent } from 'src/app/todo-form/todo-form.component';
+import { TodoFormComponent } from 'src/app/components/todo-form/todo-form.component';
+import { BghoverDirective } from './directives/bghover.directive';
+import { ZoomDirective } from './directives/zoom.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { TodoFormComponent } from 'src/app/todo-form/todo-form.component';
     TodoPageComponent,
     TodoListComponent,
     TodoListItemComponent,
-    TodoFormComponent
+    TodoFormComponent,
+    BghoverDirective,
+    ZoomDirective
+    
   ],
   imports: [
     BrowserModule,
