@@ -13,6 +13,7 @@ cestinoUrl="https://previews.123rf.com/images/arhimicrostok/arhimicrostok1706/ar
 
   ngOnInit(): void {
   }
+  @Input() crypted!: boolean;
 @Input() todos!: ITodo;
 @Output() updateTodo: EventEmitter<ITodo> = new EventEmitter<ITodo>();
   @Output() deleteTodo: EventEmitter<number> = new EventEmitter<number>();

@@ -13,9 +13,11 @@ import { TodoFacadeService } from 'src/app/services/todoFacade.service';
 export class TodoPageComponent implements OnInit {
   todos!: ITodo[];
   sub!: Subscription;
-  
+  crypted:boolean = false;
 
   constructor(private facadeService: TodoFacadeService) { }
+
+  
 
   ngOnInit(): void {
     this.facadeService.updateTodoList();

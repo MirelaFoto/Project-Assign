@@ -1,12 +1,21 @@
 
-<div class="fluid">
+<div class="fluid row  ">
+  <div class="row col-2">
     <button class="btn btn-success" routerLink="/hero-page"> Back</button>
+</div>
+<div class="col-3 ">
+  <label for="encr" class="text-danger bg-black"> Encryption </label>
+  <input type="checkbox" name="encr" id="encr" [(ngModel)]=" crypted">
+
+</div>
+
 </div>
 
 
 <app-todo-list [todos]="todos" 
 (updateTodo)="updateTodo($event)" 
-(deleteTodo)="deleteTodo($event)">
+(deleteTodo)="deleteTodo($event)"
+[crypted]="crypted">
 
 </app-todo-list>
 <hr>

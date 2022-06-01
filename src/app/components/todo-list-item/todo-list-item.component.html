@@ -3,12 +3,12 @@
         <div class="card" >
             <div class="card-body"> 
                
-        <p class="card-text"><strong>{{todos.title}}</strong> <span>
+        <p class="card-text"><strong>{{todos.title | nextCharEncrypt: crypted}}</strong> <span>
             <button type="button" class="btn btn-warn " (click)="deleteTodo.emit(todos.id)"><img [src]="cestinoUrl" ></button></span></p>
                  
             </div>
 
-        <p class="card-text">{{todos.description}}</p>
+        <p class="card-text">{{todos.description | nextCharEncrypt: crypted}}</p>
                
                 <div class="card-footer">
                 <small  >

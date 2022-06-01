@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoFormComponent } from 'src/app/components/todo-form/todo-form.component';
 import { BghoverDirective } from './directives/bghover.directive';
 import { ZoomDirective } from './directives/zoom.directive';
+import { NextCharEncryptPipe } from './pipes/next-char-encrypt.pipe';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ZoomDirective } from './directives/zoom.directive';
     TodoListItemComponent,
     TodoFormComponent,
     BghoverDirective,
-    ZoomDirective
+    ZoomDirective,
+    NextCharEncryptPipe
     
   ],
   imports: [

@@ -15,6 +15,7 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  @Input() crypted!:boolean;
 @Input() todos!:ITodo[]
 @Output() updateTodo: EventEmitter<ITodo> = new EventEmitter<ITodo>();
   @Output() deleteTodo: EventEmitter<number> = new EventEmitter<number>();
