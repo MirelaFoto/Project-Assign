@@ -42,7 +42,7 @@ export class TodoPageComponent implements OnInit {
 
   updateTodo(todo: ITodo): void {
     this.sub.push(
-      this.todoService.update(1,todo)
+      this.todoService.update(todo.id,todo)
         .subscribe((res: ITodo) => {
           this.getTodo();
         })
