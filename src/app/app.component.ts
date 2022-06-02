@@ -7,7 +7,7 @@ import { IHero } from './models/hero';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  title:string="Born to be hero"
 hero: IHero={
 id:1,
 name:'Batman',
