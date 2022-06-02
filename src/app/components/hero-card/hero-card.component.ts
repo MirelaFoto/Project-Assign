@@ -10,6 +10,7 @@ import { HeroPhraseGeneratorService} from 'src/app/services/hero-phrase-generato
 })
 export class HeroCardComponent implements OnInit {
 
+ @Input()show:boolean= true;
   constructor(private heroService: HeroPhraseGeneratorService) { }
 
   ngOnInit(): void {

@@ -1,0 +1,34 @@
+
+ <div class="container-fluid">
+    <a routerLink="new-hero" class="btn btn-success">Back </a>
+ </div><div class="container col-md-4 offset-4">
+ <app-hero-card *ngIf="hero" [hero]="hero" [show]="false"></app-hero-card></div>
+ <hr>
+ <div class="container col-md-4">
+    <form  [formGroup]="form" (ngSubmit)="addHero()">
+      <h2>Create New Hero</h2>
+      <div class="w-100">
+        <label for="name" class="mb-2 fw-bold">Name</label>
+        <input type="text" id="name" name="name" class="form-control" formControlName="name">
+        
+      </div>
+      <div class="w-100">
+        <label for="imageUrl" class="mb-2 fw-bold">Image URL</label>
+        <input type="text" id="imageUrl" name="imageUrl" class="form-control" formControlName="imageUrl">
+        
+      </div>
+      <div formArrayName="abilities" >
+        <h5 >Abilities</h5>
+        <button class="btn btn-success" (click)="addAbility()" type="button">add</button>
+        <div *ngFor="let abilityForm of abilities.controls; let i = index">
+          <div class="mb-3" [formGroupName]="i">
+            <input type="text" formControlName="ability">
+            <button class="btn btn-danger" type="button" (click)="deleteAbility(i)">delete</button>
+          </div>
+        </div>
+       
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="form.invalid">Create Hero</button>
+    </form>
+   
+  </div>

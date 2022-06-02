@@ -1,3 +1,4 @@
+
 <div class="card" style="width: 18rem;">
   <img [src]="hero.imageUrl" class="card-img-top" alt="batman">
   <div class="card-body">
@@ -12,9 +13,12 @@
           {{ele}}
         </span></li>
     </ul>
-    <button type="button" class="btn btn-success" (click)="randomFr()"> Click here for the alert! </button>
+
+    <button type="button" class="btn btn-success" (click)="randomFr()"
+    *ngIf="show"> Click here for the alert! </button>
  <button style= "margin-top: 5px;" class="btn btn-success" 
     (click)="showList.emit(hero.id)"
+    *ngIf="show"
     > See your duties! </button>
    </div>
 </div>

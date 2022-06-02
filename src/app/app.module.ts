@@ -14,6 +14,7 @@ import { TodoFormComponent } from 'src/app/components/todo-form/todo-form.compon
 import { BghoverDirective } from './directives/bghover.directive';
 import { ZoomDirective } from './directives/zoom.directive';
 import { NextCharEncryptPipe } from './pipes/next-char-encrypt.pipe';
+import { NewHeroComponent } from './views/new-hero/new-hero.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NextCharEncryptPipe } from './pipes/next-char-encrypt.pipe';
     TodoFormComponent,
     BghoverDirective,
     ZoomDirective,
-    NextCharEncryptPipe
+    NextCharEncryptPipe,
+    NewHeroComponent
     
   ],
   imports: [
